@@ -5,8 +5,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
-	base: 'image-to-text-web',
-	plugins: [tailwindcss(), sveltekit(), svelte()],
+	plugins: [tailwindcss(), sveltekit()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
