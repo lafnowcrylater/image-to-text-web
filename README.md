@@ -18,16 +18,7 @@ npm install
 npm run dev
 ```
 
-## Testing
-
-Tests are written with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com/docs/svelte-testing-library/intro).
-
-```bash
-npm run test
-```
-
 ## Stack
 
 - [Svelte](https://svelte.dev) + TypeScript
 - [Tesseract.js](https://github.com/naptha/tesseract.js) — loaded via CDN
-- [Vitest](https://vitest.dev) + `@testing-library/svelte`
