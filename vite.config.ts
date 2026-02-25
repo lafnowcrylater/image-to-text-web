@@ -2,9 +2,11 @@ import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 
 export default defineConfig({
-	plugins: [tailwindcss(), sveltekit()],
+	base: 'image-to-text-web',
+	plugins: [tailwindcss(), sveltekit(), svelte()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
