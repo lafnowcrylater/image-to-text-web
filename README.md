@@ -1,42 +1,33 @@
-# sv
+# Image to Text
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A minimal Svelte app that extracts text from images in the browser using [Tesseract.js](https://github.com/naptha/tesseract.js).
 
-## Creating a project
+No server required — OCR runs entirely client-side.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project
-npx sv create my-app
-```
+- Upload PNG, JPEG, or WebP images
+- Live image preview before extraction
+- Extracts text via Tesseract.js (English)
+- Error handling and processing state feedback
 
-To recreate this project with the same configuration:
+## Getting Started
 
-```sh
-# recreate this project
-npx sv create --template minimal --types ts --add prettier tailwindcss="plugins:none" vitest="usages:unit,component" --install npm image-to-text-web
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Testing
 
-To create a production version of your app:
+Tests are written with [Vitest](https://vitest.dev) and [Testing Library](https://testing-library.com/docs/svelte-testing-library/intro).
 
-```sh
-npm run build
+```bash
+npm run test
 ```
 
-You can preview the production build with `npm run preview`.
+## Stack
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+- [Svelte](https://svelte.dev) + TypeScript
+- [Tesseract.js](https://github.com/naptha/tesseract.js) — loaded via CDN
+- [Vitest](https://vitest.dev) + `@testing-library/svelte`
